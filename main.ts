@@ -5,7 +5,17 @@ import { mkdirSync, writeFileSync } from "node:fs";
 import { dirname } from "node:path";
 
 const ADVICE =
-  "My grandmother told me, 'Never marry a man who is rude to waiters,' and twenty years later I still check how people treat strangers before I trust them with anything that matters.";
+  "My grandfather said, 'Never trust a man who is rude to a waiter,' and in twenty years I have never once seen that test fail.";
+
+// Gate: the entry must be exactly one sentence, 1-200 chars, non-blank.
+if (
+  ADVICE.length < 1 ||
+  ADVICE.length > 200 ||
+  ADVICE.trim().length === 0 ||
+  (ADVICE.match(/\./g) ?? []).length !== 1
+) {
+  throw new Error(`Invalid entry: ${ADVICE.length} chars`);
+}
 
 const outPath = "/output/entry.txt";
 mkdirSync(dirname(outPath), { recursive: true });

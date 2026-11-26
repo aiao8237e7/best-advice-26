@@ -10,9 +10,8 @@ Entry for the make.fun bounty **"The Best Advice I Ever Got"**
 `main.ts` writes one sentence — the best advice the writer ever received,
 in a single sentence of at most 200 characters — to `/output/entry.txt`.
 
-> My grandmother told me, 'Never marry a man who is rude to waiters,' and
-> twenty years later I still check how people treat strangers before I trust
-> them with anything that matters.
+> My grandfather said, 'Never trust a man who is rude to a waiter,' and in
+> twenty years I have never once seen that test fail.
 
 ## Run
 
